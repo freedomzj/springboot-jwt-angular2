@@ -26,6 +26,8 @@ export class LoginComponent {
 
 
     handleError(error) {
+        console.log(error);
+        
         console.log(error.status);
     }
 

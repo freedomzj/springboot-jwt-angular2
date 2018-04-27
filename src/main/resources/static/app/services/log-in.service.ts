@@ -11,10 +11,11 @@ export class LoginService {
     constructor(private http:Http) {}
 
     login(email, password):Observable<Response> {
+        console.log(email);
         let loginRequest = JSON.stringify({email: email, password: password});
         let headers = new Headers({'Content-Type': 'application/json', 'Accept': 'application/json'});
 
-        return this.http.post('http://localhost:8080/api/login', loginRequest, { headers: headers })
+        return this.http.post('http://localhost:8080/api/test', loginRequest, { headers: headers })
                         .do(resp => {
                             localStorage.setItem('jwt', resp.headers.get('x-auth-token'));
                         });

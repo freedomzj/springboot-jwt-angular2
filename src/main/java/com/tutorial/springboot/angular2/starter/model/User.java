@@ -144,8 +144,12 @@ public class User implements UserDetails {
         this.role = role;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hashCode(getId(), getUsername(), getPassword(), getRole().getRolename(), isEnabled());
-    }
+//    @Override
+//    public int hashCode() {
+//        return Objects.hashCode(getId(), getUsername(), getPassword(), getRole().getRolename(), isEnabled());
+//    }
+
+	public void setEmail(String usernameOrEmail) {
+		
+	}
 }

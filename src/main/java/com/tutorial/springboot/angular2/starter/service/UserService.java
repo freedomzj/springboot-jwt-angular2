@@ -12,5 +12,8 @@ public interface UserService extends org.springframework.security.core.userdetai
     User update(User user, UserDTO params);
     Optional<User> findUser(Long id);
     User createUser(UserDTO userDTO);
+    
+	User findByUser(User user);
+	User findByUsername(User user);
 
 }

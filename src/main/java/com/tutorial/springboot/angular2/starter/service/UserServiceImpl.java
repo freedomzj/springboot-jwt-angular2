@@ -58,4 +58,15 @@ public class UserServiceImpl implements UserService  {
         user.setRole(role);
         return user;
     }
+
+	@Override
+	public User findByUser(User user) {
+		return userRepository.findByUsernameAndPassword(user.getUsername(),user.getPassword());
+	}
+	
+	@Override
+	public User findByUsername(User user) {
+		
+		return userRepository.findByUsername(user.getUsername()).get();
+	}
 }
