@@ -22,7 +22,7 @@ export class PostDetailComponent implements OnInit  {
         this.commentShow = false;
         this.route.params.subscribe(params => {
             if (params['id'] !== undefined) {
-                let id = +params['id'];
+                let id = +params['id`'];
                 this.postService.getPost(id).subscribe(post => this.post = post);
             }
         });

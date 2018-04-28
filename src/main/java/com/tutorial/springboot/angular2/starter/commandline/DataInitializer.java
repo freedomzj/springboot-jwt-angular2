@@ -16,7 +16,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class DataInitializer implements CommandLineRunner {
 
-    @Autowired
+	@Override
+	public void run(String... arg0) throws Exception {
+		
+	}
+
+   /* @Autowired
     PostService postService;
 
     @Autowired
@@ -61,7 +66,7 @@ public class DataInitializer implements CommandLineRunner {
 
         return  posts;
 
-    }
+    }*/
 
 
 }

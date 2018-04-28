@@ -17,8 +17,10 @@ export class LoginService {
 
         return this.http.post('http://localhost:8080/api/test', loginRequest, { headers: headers })
                         .do(resp => {
-                            localStorage.setItem('jwt', resp.headers.get('x-auth-token'));
-                        });
+                           console.log(resp.text().data);
+                            localStorage.setItem('jwt', resp.text().data);
+                        })
+                        ;
     }
 
     logout():void {

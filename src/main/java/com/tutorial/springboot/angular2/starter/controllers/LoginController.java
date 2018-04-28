@@ -84,6 +84,7 @@ public class LoginController {
 			return new ResponseEntity<>(resultModel, HttpStatus.OK);
 		}
 
+		
 		String jwtToken = JwtHelper.createJWT(query_user.getUsername(), query_user.getId().toString(),
 				query_user.getRole().toString(), audience.getClientId(), audience.getName(),
 				audience.getExpiresSecond() * 1000, audience.getBase64Secret());
